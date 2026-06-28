@@ -20,157 +20,791 @@
     --orange: #C47000;
   }
   body { font-family: 'Helvetica Neue', Arial, sans-serif; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
-  .top-bar { background: var(--black); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--yellow); }
+
+  /* TOP BAR */
+  .top-bar {
+    background: var(--black);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--yellow);
+  }
   .top-bar img { height: 28px; }
   .top-bar-right { font-size: 10px; color: #888; letter-spacing: 0.5px; text-align: right; line-height: 1.5; }
   .top-bar-right span { display: block; color: var(--yellow); font-weight: 700; font-size: 11px; }
-  .hero { background: var(--black); color: var(--white); padding: 48px 20px 40px; }
-  .hero-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); font-weight: 700; margin-bottom: 14px; }
-  .hero h1 { font-size: 32px; font-weight: 900; line-height: 1.1; margin-bottom: 10px; letter-spacing: -0.5px; }
+
+  /* HERO */
+  .hero {
+    background: var(--black);
+    color: var(--white);
+    padding: 48px 20px 40px;
+  }
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
   .hero h1 span { color: var(--yellow); }
-  .hero-sub { font-size: 14px; color: #777; margin-bottom: 28px; }
-  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
-  .stat-card { background: #1c1c1c; border: 1px solid #2a2a2a; border-radius: 8px; padding: 14px; }
-  .stat-card .num { font-size: 28px; font-weight: 900; color: var(--yellow); line-height: 1; }
-  .stat-card .lbl { font-size: 11px; color: #777; margin-top: 5px; line-height: 1.4; }
-  .intro { background: var(--white); padding: 32px 20px; border-bottom: 1px solid var(--gray-mid); }
-  .intro p { font-size: 14px; line-height: 1.75; color: var(--text); margin-bottom: 12px; }
+  .hero-sub {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 28px;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .stat-card {
+    background: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .stat-card .num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--yellow);
+    line-height: 1;
+  }
+  .stat-card .lbl {
+    font-size: 11px;
+    color: #777;
+    margin-top: 5px;
+    line-height: 1.4;
+  }
+
+  /* INTRO */
+  .intro {
+    background: var(--white);
+    padding: 32px 20px;
+    border-bottom: 1px solid var(--gray-mid);
+  }
+  .intro p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
   .intro p:last-child { margin-bottom: 0; }
-  .priority-section { background: var(--black); padding: 36px 20px; }
-  .priority-section .sec-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); font-weight: 700; margin-bottom: 6px; }
-  .priority-section h2 { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 4px; }
-  .priority-section .sub { font-size: 12px; color: #666; margin-bottom: 24px; }
-  .priority-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
-  .priority-card .p-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
-  .priority-card.open .p-header { border-bottom: 1px solid #2a2a2a; }
-  .p-num { background: var(--yellow); color: var(--black); font-size: 13px; font-weight: 900; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+  /* PRIORITY SECTION */
+  .priority-section {
+    background: var(--black);
+    padding: 36px 20px;
+  }
+  .priority-section .sec-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .priority-section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .priority-section .sub {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 24px;
+  }
+  .priority-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .priority-card .p-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .priority-card.open .p-header {
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .p-num {
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 900;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
   .p-title { flex: 1; min-width: 0; }
-  .p-title strong { font-size: 14px; color: var(--white); display: block; line-height: 1.2; }
-  .p-title small { font-size: 11px; color: #555; margin-top: 2px; display: block; }
-  .p-arrow { color: #444; font-size: 16px; transition: transform 0.2s ease; flex-shrink: 0; }
+  .p-title strong {
+    font-size: 14px;
+    color: var(--white);
+    display: block;
+    line-height: 1.2;
+  }
+  .p-title small {
+    font-size: 11px;
+    color: #555;
+    margin-top: 2px;
+    display: block;
+  }
+  .p-arrow {
+    color: #444;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
   .priority-card.open .p-arrow { transform: rotate(180deg); }
-  .p-body { display: none; padding: 16px; flex-direction: column; gap: 14px; }
+  .p-body {
+    display: none;
+    padding: 16px;
+    flex-direction: column;
+    gap: 14px;
+  }
   .priority-card.open .p-body { display: flex; }
-  .p-field .f-label { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--yellow); margin-bottom: 4px; }
-  .p-field .f-text { font-size: 13px; line-height: 1.6; color: #bbb; }
+  .p-field .f-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 4px;
+  }
+  .p-field .f-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #bbb;
+  }
   .f-text.resultado { color: #5fcf8a; }
-  .canais-section { background: var(--white); padding: 36px 20px; }
-  .canais-section .sec-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow-dark); font-weight: 700; margin-bottom: 6px; }
-  .canais-section h2 { font-size: 22px; font-weight: 800; color: var(--black); margin-bottom: 4px; }
-  .canais-section .sub { font-size: 12px; color: var(--text-light); margin-bottom: 24px; }
-  .canal-card { border: 1px solid var(--gray-mid); border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: var(--white); }
-  .canal-card .c-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; background: var(--white); }
-  .canal-card.open .c-header { border-bottom: 1px solid var(--gray-mid); background: var(--gray); }
-  .canal-card .c-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--black); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+
+  /* CANAIS SECTION */
+  .canais-section {
+    background: var(--white);
+    padding: 36px 20px;
+  }
+  .canais-section .sec-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--yellow-dark);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .canais-section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .canais-section .sub {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+  }
+
+  /* CANAL CARD */
+  .canal-card {
+    border: 1px solid var(--gray-mid);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: var(--white);
+  }
+  .canal-card .c-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    background: var(--white);
+  }
+  .canal-card.open .c-header {
+    border-bottom: 1px solid var(--gray-mid);
+    background: var(--gray);
+  }
+  .canal-card .c-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
   .canal-card .c-title { flex: 1; min-width: 0; }
-  .canal-card .c-title strong { font-size: 14px; color: var(--black); display: block; font-weight: 700; }
-  .canal-card .c-title small { font-size: 11px; color: var(--text-light); margin-top: 2px; display: block; }
-  .c-badge { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 20px; flex-shrink: 0; letter-spacing: 0.3px; }
+  .canal-card .c-title strong {
+    font-size: 14px;
+    color: var(--black);
+    display: block;
+    font-weight: 700;
+  }
+  .canal-card .c-title small {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 2px;
+    display: block;
+  }
+  .c-badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+  }
   .c-badge.risco { background: #fdecea; color: var(--red); }
   .c-badge.oportunidade { background: #e8f5ee; color: var(--green); }
   .c-badge.atencao { background: #fff3e0; color: var(--orange); }
-  .c-arrow { color: #bbb; font-size: 14px; transition: transform 0.2s ease; flex-shrink: 0; }
+  .c-arrow {
+    color: #bbb;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
   .canal-card.open .c-arrow { transform: rotate(180deg); }
-  .c-body { display: none; padding: 16px; flex-direction: column; gap: 10px; background: var(--white); }
+  .c-body {
+    display: none;
+    padding: 16px;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--white);
+  }
   .canal-card.open .c-body { display: flex; }
-  .data-row { display: flex; border-radius: 6px; overflow: hidden; border: 1px solid var(--gray-mid); }
-  .data-row .key { background: var(--black); color: var(--white); font-size: 10px; font-weight: 700; padding: 9px 10px; width: 90px; min-width: 90px; display: flex; align-items: center; letter-spacing: 0.2px; line-height: 1.3; }
-  .data-row .val { background: var(--gray); color: var(--text); font-size: 12px; padding: 9px 12px; display: flex; align-items: center; flex: 1; line-height: 1.4; }
-  ul.c-list { list-style: none; margin-top: 4px; }
-  ul.c-list li { font-size: 13px; line-height: 1.6; color: var(--text); padding: 7px 0 7px 18px; border-bottom: 1px solid var(--gray-mid); position: relative; }
+
+  /* DATA ROW */
+  .data-row {
+    display: flex;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--gray-mid);
+  }
+  .data-row .key {
+    background: var(--black);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 9px 10px;
+    width: 90px;
+    min-width: 90px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    line-height: 1.3;
+  }
+  .data-row .val {
+    background: var(--gray);
+    color: var(--text);
+    font-size: 12px;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  /* CANAL BULLETS */
+  ul.c-list {
+    list-style: none;
+    margin-top: 4px;
+  }
+  ul.c-list li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+    padding: 7px 0 7px 18px;
+    border-bottom: 1px solid var(--gray-mid);
+    position: relative;
+  }
   ul.c-list li:last-child { border-bottom: none; }
-  ul.c-list li::before { content: "•"; position: absolute; left: 4px; color: var(--yellow-dark); font-weight: 700; }
-  .c-body p { font-size: 13px; line-height: 1.7; color: var(--text); }
-  .oportunidade-section { background: var(--yellow); padding: 40px 20px; }
-  .oportunidade-section .sec-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(0,0,0,0.5); font-weight: 700; margin-bottom: 8px; }
-  .oportunidade-section h2 { font-size: 22px; font-weight: 900; color: var(--black); margin-bottom: 16px; }
-  .oportunidade-section p { font-size: 14px; line-height: 1.75; color: #1a1a1a; margin-bottom: 12px; }
+  ul.c-list li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--yellow-dark);
+    font-weight: 700;
+  }
+  .c-body p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  /* OPORTUNIDADE */
+  .oportunidade-section {
+    background: var(--yellow);
+    padding: 40px 20px;
+  }
+  .oportunidade-section .sec-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.5);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .oportunidade-section h2 {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+  .oportunidade-section p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
   .oportunidade-section p:last-child { margin-bottom: 0; }
-  .steps-section { background: var(--black); padding: 40px 20px; }
-  .steps-section .sec-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); font-weight: 700; margin-bottom: 6px; }
-  .steps-section h2 { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 28px; }
-  .step { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+
+  /* PRÓXIMOS PASSOS */
+  .steps-section {
+    background: var(--black);
+    padding: 40px 20px;
+  }
+  .steps-section .sec-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .steps-section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
   .step:last-child { margin-bottom: 0; }
-  .step-num { background: var(--yellow); color: var(--black); font-size: 13px; font-weight: 900; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-  .step-content strong { font-size: 14px; color: var(--white); display: block; margin-bottom: 4px; font-weight: 700; }
-  .step-content p { font-size: 13px; color: #777; line-height: 1.6; }
-  .footer { background: #0a0a0a; padding: 28px 20px; color: #444; font-size: 12px; line-height: 1.7; text-align: center; border-top: 3px solid var(--yellow); }
-  .footer .kukai { font-size: 18px; font-weight: 900; color: var(--yellow); letter-spacing: 3px; margin-bottom: 6px; }
-  .footer .confidential { font-size: 10px; color: #333; margin-top: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .step-num {
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-content strong {
+    font-size: 14px;
+    color: var(--white);
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .step-content p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: #0a0a0a;
+    padding: 28px 20px;
+    color: #444;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+    border-top: 3px solid var(--yellow);
+  }
+  .footer .kukai {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--yellow);
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+  }
+  .footer .confidential {
+    font-size: 10px;
+    color: #333;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 </style>
 </head>
 <body>
+
+<!-- TOP BAR -->
 <div class="top-bar">
   <img src="https://www.souzalima.com.br/wp-content/uploads/2022/10/logo-white.png" alt="Souza Lima" />
-  <div class="top-bar-right"><span>KUKAI</span>Diagnostico · Junho 2026</div>
-</div>
-<div class="hero">
-  <div class="hero-label">Diagnostico de Comunicacao Digital</div>
-  <h1>O ativo que a<br><span>Souza Lima</span><br>ainda nao usa.</h1>
-  <div class="hero-sub">Conservatorio &amp; Faculdade de Musica</div>
-  <div class="hero-stats">
-    <div class="stat-card"><div class="num">4M+</div><div class="lbl">visitas/ano no blog</div></div>
-    <div class="stat-card"><div class="num">46</div><div class="lbl">anos de historia</div></div>
-    <div class="stat-card"><div class="num">25k</div><div class="lbl">seguidores Instagram</div></div>
-    <div class="stat-card"><div class="num">0</div><div class="lbl">CTAs no blog inteiro</div></div>
+  <div class="top-bar-right">
+    <span>KUKAI</span>
+    Diagnóstico · Junho 2026
   </div>
 </div>
-<div class="intro">
-  <p>Voce tem credenciais que poucas escolas de musica no mundo podem apresentar: parceria exclusiva com a Berklee desde 1997, bolsas da Fundacao Grammy Latino, 46 anos de historia, Roberto Menescal publicando pela sua editora, CLAEM com presenca em 11 paises. Nenhum desses ativos aparece de forma visivel na comunicacao digital.</p>
-  <p>Os canais existem, o trafego existe, as credenciais existem. O que falta e a conexao entre esses ativos e a decisao de matricula.</p>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Diagnóstico de Comunicação Digital</div>
+  <h1>O ativo que a<br><span>Souza Lima</span><br>ainda não usa.</h1>
+  <div class="hero-sub">Conservatório &amp; Faculdade de Música</div>
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="num">4M+</div>
+      <div class="lbl">visitas/ano no blog</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">46</div>
+      <div class="lbl">anos de história</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">25k</div>
+      <div class="lbl">seguidores Instagram</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">0</div>
+      <div class="lbl">CTAs no blog inteiro</div>
+    </div>
+  </div>
 </div>
+
+<!-- INTRO -->
+<div class="intro">
+  <p>Você tem credenciais que poucas escolas de música no mundo podem apresentar: parceria exclusiva com a Berklee desde 1997, bolsas da Fundação Grammy Latino, 46 anos de história, Roberto Menescal publicando pela sua editora, CLAEM com presença em 11 países. Nenhum desses ativos aparece de forma visível na comunicação digital.</p>
+  <p>Os canais existem, o tráfego existe, as credenciais existem. O que falta é a conexão entre esses ativos e a decisão de matrícula.</p>
+</div>
+
+<!-- PRIORIDADES -->
 <div class="priority-section">
   <div class="sec-label">O que fazer</div>
   <h2>Prioridades</h2>
   <div class="sub">Toque para expandir cada frente</div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">1</div><div class="p-title"><strong>Blog</strong><small>~4M visitas/ano</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Zero CTA em qualquer artigo. O visitante aprende e vai embora sem nenhum ponto de contato com a escola.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">CTAs contextuais nos artigos, banner de matricula, link direto para WhatsApp ou formulario no final de cada post.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Parte do trafego existente entra no funil sem gastar R$1 em midia nova.</div></div></div></div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">2</div><div class="p-title"><strong>Instagram</strong><small>25k / 3.876 posts</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Volume alto de posts, posicionamento baixo. Qualquer escola poderia publicar o mesmo conteudo.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Conteudo que so a Souza Lima pode produzir: bastidores de professores, historias de alunos, credenciais internacionais em destaque.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Diferenciacao clara no feed. Autoridade que converte seguidor em lead.</div></div></div></div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">3</div><div class="p-title"><strong>Site</strong><small>9 meses sem atualizacao</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Berklee e Grammy nao aparecem em destaque. Preco invisivel na listagem de cursos.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Credenciais em destaque na home, precos visiveis na listagem, depoimentos de ex-alunos.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Quem chega no site entende em 10 segundos por que a Souza Lima e diferente.</div></div></div></div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">4</div><div class="p-title"><strong>Google Ads</strong><small>Trafego pago</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Trafego pago vai para paginas sem autoridade visivel, sem preco, sem argumento de conversao.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Landing page dedicada com credenciais, depoimento, preco e rastreamento de conversao.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Cada real investido em midia paga tem uma pagina preparada para converter.</div></div></div></div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">5</div><div class="p-title"><strong>WhatsApp / Leads</strong><small>Unico canal de entrada</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Sem rastreamento, sem qualificacao estruturada, sem follow-up. Nao ha visibilidade de quantos leads chegam nem onde saem do funil.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Registro minimo de leads, criterio de qualificacao, rotina de follow-up para quem nao respondeu.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Visibilidade real do funil: de onde vem os leads, quantos viram aluno, onde estao saindo.</div></div></div></div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">6</div><div class="p-title"><strong>EAD Julho</strong><small>Lancamento previsto</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Lancamento sem campanha de pre-aquecimento. Quem ja e aluno ou ex-aluno nao foi ativado como potencial comprador.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Campanha de pre-lancamento para base existente, lista de espera, sequencia de follow-up para quem demonstrou interesse.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Primeiras matriculas EAD antes do lancamento oficial, com base aquecida.</div></div></div></div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">7</div><div class="p-title"><strong>YouTube / Reels</strong><small>Repositorio parado</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Acervo de videos de alto valor sem reaproveitamento estrategico.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Clipagem de trechos para Reels e Shorts, cadencia de publicacao, SEO de video no YouTube.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Alcance organico ampliado sem custo de producao adicional.</div></div></div></div>
-  <div class="priority-card" onclick="toggleCard(this)"><div class="p-header"><div class="p-num">8</div><div class="p-title"><strong>Loja / Editora</strong><small>Invisivel nas redes</small></div><div class="p-arrow">&#9662;</div></div><div class="p-body"><div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Publicacoes da editora e Roberto Menescal como autor nao sao usados como diferencial nos canais digitais.</div></div><div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Integracao dos livros no blog como autoridade de conteudo, posts no Instagram, mencao nas campanhas de credencial.</div></div><div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">A Souza Lima comunica que nao so ensina, mas produz e publica conhecimento de referencia.</div></div></div></div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">1</div>
+      <div class="p-title"><strong>Blog</strong><small>~4M visitas/ano</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Zero CTA em qualquer artigo. O visitante aprende e vai embora sem nenhum ponto de contato com a escola.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">CTAs contextuais nos artigos, banner de matrícula, link direto para WhatsApp ou formulário no final de cada post.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Parte do tráfego existente entra no funil sem gastar R$1 em mídia nova.</div></div>
+    </div>
+  </div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">2</div>
+      <div class="p-title"><strong>Instagram</strong><small>25k / 3.876 posts</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Volume alto de posts, posicionamento baixo. Qualquer escola poderia publicar o mesmo conteúdo.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Conteúdo que só a Souza Lima pode produzir: bastidores de professores, histórias de alunos, credenciais internacionais em destaque.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Diferenciação clara no feed. Autoridade que converte seguidor em lead.</div></div>
+    </div>
+  </div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">3</div>
+      <div class="p-title"><strong>Site</strong><small>9 meses sem atualização</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Berklee e Grammy não aparecem em destaque. Preço invisível na listagem de cursos.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Credenciais em destaque na home, preços visíveis na listagem, depoimentos de ex-alunos.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Quem chega no site entende em 10 segundos por que a Souza Lima é diferente.</div></div>
+    </div>
+  </div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">4</div>
+      <div class="p-title"><strong>Google Ads</strong><small>Tráfego pago</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Tráfego pago vai para páginas sem autoridade visível, sem preço, sem argumento de conversão.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Landing page dedicada com credenciais, depoimento, preço e rastreamento de conversão.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Cada real investido em mídia paga tem uma página preparada para converter.</div></div>
+    </div>
+  </div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">5</div>
+      <div class="p-title"><strong>WhatsApp / Leads</strong><small>Único canal de entrada</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Sem rastreamento, sem qualificação estruturada, sem follow-up. Não há visibilidade de quantos leads chegam nem onde saem do funil.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Registro mínimo de leads, critério de qualificação, rotina de follow-up para quem não respondeu.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Visibilidade real do funil: de onde vêm os leads, quantos viram aluno, onde estão saindo.</div></div>
+    </div>
+  </div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">6</div>
+      <div class="p-title"><strong>EAD Julho</strong><small>Lançamento previsto</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Lançamento sem campanha de pré-aquecimento. Quem já é aluno ou ex-aluno não foi ativado como potencial comprador.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Campanha de pré-lançamento para base existente, lista de espera, sequência de follow-up para quem demonstrou interesse.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Primeiras matrículas EAD antes do lançamento oficial, com base aquecida.</div></div>
+    </div>
+  </div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">7</div>
+      <div class="p-title"><strong>YouTube / Reels</strong><small>Repositório parado</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Acervo de vídeos de alto valor (masterclasses, shows, professores) sem reaproveitamento estratégico.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Clipagem de trechos para Reels e Shorts, cadência de publicação, SEO de vídeo no YouTube.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">Alcance orgânico ampliado sem custo de produção adicional.</div></div>
+    </div>
+  </div>
+
+  <div class="priority-card" onclick="toggleCard(this)">
+    <div class="p-header">
+      <div class="p-num">8</div>
+      <div class="p-title"><strong>Loja / Editora</strong><small>Invisível nas redes</small></div>
+      <div class="p-arrow">▾</div>
+    </div>
+    <div class="p-body">
+      <div class="p-field"><div class="f-label">Gap atual</div><div class="f-text">Publicações da editora e Roberto Menescal como autor não são usados como diferencial nos canais digitais.</div></div>
+      <div class="p-field"><div class="f-label">O que melhorar</div><div class="f-text">Integração dos livros no blog como autoridade de conteúdo, posts no Instagram, menção nas campanhas de credencial.</div></div>
+      <div class="p-field"><div class="f-label">Resultado esperado</div><div class="f-text resultado">A Souza Lima comunica que não só ensina, mas produz e publica conhecimento de referência.</div></div>
+    </div>
+  </div>
 </div>
+
+<!-- CANAIS -->
 <div class="canais-section">
-  <div class="sec-label">Diagnostico por canal</div>
+  <div class="sec-label">Diagnóstico por canal</div>
   <h2>O que encontramos</h2>
   <div class="sub">Toque para ver o detalhe de cada canal</div>
-  <div class="canal-card" onclick="toggleCanal(this)"><div class="c-header"><div class="c-icon">&#9999;&#65039;</div><div class="c-title"><strong>Blog Souza Lima</strong><small>~4 milhoes de visitas/ano</small></div><div class="c-badge oportunidade">Oportunidade</div><div class="c-arrow">&#9662;</div></div><div class="c-body"><div class="data-row"><div class="key">Visitas/ano</div><div class="val">~4 milhoes</div></div><div class="data-row"><div class="key">CTAs</div><div class="val">Nenhum em nenhum artigo</div></div><p>O ativo mais valioso e mais desperdicado. Centenas de artigos rankeados no Google, nenhum com call-to-action. A pessoa pesquisa, le, aprende, e vai embora sem saber que existe um curso.</p><ul class="c-list"><li>Zero CTAs em qualquer artigo publicado</li><li>Blog em dominio separado, sem integracao com o site</li><li>4M de visitantes/ano saindo sem nenhum ponto de contato</li></ul></div></div>
-  <div class="canal-card" onclick="toggleCanal(this)"><div class="c-header"><div class="c-icon">&#127760;</div><div class="c-title"><strong>Site souzalima.com.br</strong><small>Atualizado em set/2024</small></div><div class="c-badge atencao">Atencao</div><div class="c-arrow">&#9662;</div></div><div class="c-body"><div class="data-row"><div class="key">Berklee</div><div class="val">Nao em destaque na home</div></div><div class="data-row"><div class="key">Grammy</div><div class="val">Nao em destaque na home</div></div><div class="data-row"><div class="key">Precos</div><div class="val">Invisiveis na listagem de cursos</div></div><p>Quem chega pelo Google nao encontra autoridade nos primeiros segundos. Para ver preco, o usuario entra em cada curso um por um.</p><ul class="c-list"><li>Home nao comunica os diferenciais internacionais</li><li>Cursos Livres sem preco antes do WhatsApp</li><li>Nenhum depoimento de ex-aluno em destaque</li></ul></div></div>
-  <div class="canal-card" onclick="toggleCanal(this)"><div class="c-header"><div class="c-icon">&#128247;</div><div class="c-title"><strong>Instagram</strong><small>25k seguidores</small></div><div class="c-badge atencao">Atencao</div><div class="c-arrow">&#9662;</div></div><div class="c-body"><div class="data-row"><div class="key">@oficial</div><div class="val">25.000 seguidores · 3.876 posts</div></div><div class="data-row"><div class="key">@faculdade</div><div class="val">3.800 seguidores · perfil separado</div></div><p>Volume alto de posts, posicionamento baixo. Qualquer escola poderia publicar o mesmo. Voce tem professores e historias que ninguem mais tem, e isso nao aparece.</p><ul class="c-list"><li>Conteudo generico, sem diferenciacao da Souza Lima</li><li>Berklee, Grammy e Roberto Menescal ausentes do feed</li><li>Dois perfis separados diluem a audiencia</li></ul></div></div>
-  <div class="canal-card" onclick="toggleCanal(this)"><div class="c-header"><div class="c-icon">&#128172;</div><div class="c-title"><strong>WhatsApp</strong><small>Unico ponto de entrada</small></div><div class="c-badge risco">Risco</div><div class="c-arrow">&#9662;</div></div><div class="c-body"><p>O WhatsApp e o principal canal de entrada visivel no site. Sem integracao com CRM ou ferramenta de acompanhamento, nao e possivel saber quantas pessoas entraram em contato, em qual etapa sairam ou qual campanha originou o contato.</p><ul class="c-list"><li>WhatsApp nao gera historico estruturado nem atribuicao de campanha</li><li>Leads que nao respondem saem do radar sem recuperacao</li><li>Sem follow-up estruturado, o interesse se perde com o tempo</li></ul></div></div>
-  <div class="canal-card" onclick="toggleCanal(this)"><div class="c-header"><div class="c-icon">&#127919;</div><div class="c-title"><strong>Google Ads</strong><small>Trafego pago</small></div><div class="c-badge risco">Risco</div><div class="c-arrow">&#9662;</div></div><div class="c-body"><p>A escola investe em midia paga. O problema nao e o investimento, e o destino. O trafego vai para paginas sem credencial visivel, sem preco e sem argumento de conversao.</p><ul class="c-list"><li>Paginas de destino nao comunicam os diferenciais da escola</li><li>Sem landing page dedicada, o trafego pago dilui no site geral</li><li>Sem rastreamento de conversao, nao ha como medir o que funciona</li></ul></div></div>
-  <div class="canal-card" onclick="toggleCanal(this)"><div class="c-header"><div class="c-icon">&#127916;</div><div class="c-title"><strong>YouTube / Reels</strong><small>Acervo subutilizado</small></div><div class="c-badge atencao">Atencao</div><div class="c-arrow">&#9662;</div></div><div class="c-body"><p>A Souza Lima tem um acervo de videos que poucas escolas de musica do Brasil conseguiriam produzir. Esse conteudo existe, mas nao esta sendo reaproveitado.</p><ul class="c-list"><li>Acervo de masterclasses e shows sem reaproveitamento em Reels</li><li>YouTube sem cadencia estrategica nem SEO de video</li><li>Conteudo de alto valor produzido uma vez e esquecido</li></ul></div></div>
-  <div class="canal-card" onclick="toggleCanal(this)"><div class="c-header"><div class="c-icon">&#128218;</div><div class="c-title"><strong>Loja / Editora</strong><small>Roberto Menescal, entre outros</small></div><div class="c-badge atencao">Atencao</div><div class="c-arrow">&#9662;</div></div><div class="c-body"><p>A Souza Lima tem uma editora com livros de musicos referencia, incluindo Roberto Menescal. Esse ativo nao aparece de forma integrada no blog, no Instagram, nem nas campanhas.</p><ul class="c-list"><li>Publicacoes da editora ausentes do blog e do Instagram</li><li>Roberto Menescal como autor nao e comunicado como diferencial</li><li>Loja desconectada da estrategia de conteudo</li></ul></div></div>
+
+  <div class="canal-card" onclick="toggleCanal(this)">
+    <div class="c-header">
+      <div class="c-icon">✍️</div>
+      <div class="c-title"><strong>Blog Souza Lima</strong><small>~4 milhões de visitas/ano</small></div>
+      <div class="c-badge oportunidade">Oportunidade</div>
+      <div class="c-arrow">▾</div>
+    </div>
+    <div class="c-body">
+      <div class="data-row"><div class="key">Visitas/ano</div><div class="val">~4 milhões</div></div>
+      <div class="data-row"><div class="key">CTAs</div><div class="val">Nenhum em nenhum artigo</div></div>
+      <p>O ativo mais valioso e mais desperdiçado. Centenas de artigos rankeados no Google, nenhum com call-to-action. A pessoa pesquisa, lê, aprende, e vai embora sem saber que existe um curso.</p>
+      <ul class="c-list">
+        <li>Zero CTAs em qualquer artigo publicado</li>
+        <li>Blog em domínio separado, sem integração com o site</li>
+        <li>4M de visitantes/ano saindo sem nenhum ponto de contato</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canal-card" onclick="toggleCanal(this)">
+    <div class="c-header">
+      <div class="c-icon">🌐</div>
+      <div class="c-title"><strong>Site souzalima.com.br</strong><small>Atualizado em set/2024</small></div>
+      <div class="c-badge atencao">Atenção</div>
+      <div class="c-arrow">▾</div>
+    </div>
+    <div class="c-body">
+      <div class="data-row"><div class="key">Berklee</div><div class="val">Não em destaque na home</div></div>
+      <div class="data-row"><div class="key">Grammy</div><div class="val">Não em destaque na home</div></div>
+      <div class="data-row"><div class="key">Preços</div><div class="val">Invisíveis na listagem de cursos</div></div>
+      <p>Quem chega pelo Google não encontra autoridade nos primeiros segundos. As credenciais que diferenciam a Souza Lima não aparecem na home. Para ver preço, o usuário entra em cada curso um por um.</p>
+      <ul class="c-list">
+        <li>Home não comunica os diferenciais internacionais</li>
+        <li>Cursos Livres sem preço antes do WhatsApp</li>
+        <li>Nenhum depoimento de ex-aluno em destaque</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canal-card" onclick="toggleCanal(this)">
+    <div class="c-header">
+      <div class="c-icon">📸</div>
+      <div class="c-title"><strong>Instagram</strong><small>25k seguidores</small></div>
+      <div class="c-badge atencao">Atenção</div>
+      <div class="c-arrow">▾</div>
+    </div>
+    <div class="c-body">
+      <div class="data-row"><div class="key">@oficial</div><div class="val">25.000 seguidores · 3.876 posts</div></div>
+      <div class="data-row"><div class="key">@faculdade</div><div class="val">3.800 seguidores · perfil separado</div></div>
+      <p>Volume alto de posts, posicionamento baixo. O feed mistura conteúdo educativo genérico com divulgação de eventos. Qualquer escola poderia publicar o mesmo. Você tem professores, parceiros e histórias que ninguém mais tem, e isso não aparece.</p>
+      <ul class="c-list">
+        <li>Conteúdo genérico, sem diferenciação da Souza Lima</li>
+        <li>Berklee, Grammy e Roberto Menescal ausentes do feed</li>
+        <li>Dois perfis separados diluem a audiência</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canal-card" onclick="toggleCanal(this)">
+    <div class="c-header">
+      <div class="c-icon">💬</div>
+      <div class="c-title"><strong>WhatsApp</strong><small>Único ponto de entrada</small></div>
+      <div class="c-badge risco">Risco</div>
+      <div class="c-arrow">▾</div>
+    </div>
+    <div class="c-body">
+      <p>O WhatsApp é o principal canal de entrada visível no site. O problema é estrutural: sem integração com CRM ou ferramenta de acompanhamento, não é possível saber quantas pessoas entraram em contato, em qual etapa saíram ou qual campanha originou o contato.</p>
+      <ul class="c-list">
+        <li>WhatsApp não gera histórico estruturado nem atribuição de campanha</li>
+        <li>Leads que não respondem saem do radar sem recuperação</li>
+        <li>Sem follow-up estruturado, o interesse se perde com o tempo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canal-card" onclick="toggleCanal(this)">
+    <div class="c-header">
+      <div class="c-icon">🎯</div>
+      <div class="c-title"><strong>Google Ads</strong><small>Tráfego pago</small></div>
+      <div class="c-badge risco">Risco</div>
+      <div class="c-arrow">▾</div>
+    </div>
+    <div class="c-body">
+      <p>A escola investe em mídia paga. O problema não é o investimento, é o destino. O tráfego vai para páginas sem credencial visível, sem preço e sem argumento de conversão. O clique certo na hora certa, chegando numa página que não responde às perguntas básicas, vira custo, não oportunidade.</p>
+      <ul class="c-list">
+        <li>Páginas de destino não comunicam os diferenciais da escola</li>
+        <li>Sem landing page dedicada, o tráfego pago dilui no site geral</li>
+        <li>Sem rastreamento de conversão, não há como medir o que funciona</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canal-card" onclick="toggleCanal(this)">
+    <div class="c-header">
+      <div class="c-icon">🎬</div>
+      <div class="c-title"><strong>YouTube / Reels</strong><small>Acervo subutilizado</small></div>
+      <div class="c-badge atencao">Atenção</div>
+      <div class="c-arrow">▾</div>
+    </div>
+    <div class="c-body">
+      <p>A Souza Lima tem um acervo de vídeos que poucas escolas de música do Brasil conseguiriam produzir. Esse conteúdo existe, mas não está sendo reaproveitado. Reels e Shorts são os formatos de maior alcance orgânico hoje.</p>
+      <ul class="c-list">
+        <li>Acervo de masterclasses e shows sem reaproveitamento em Reels</li>
+        <li>YouTube sem cadência estratégica nem SEO de vídeo</li>
+        <li>Conteúdo de alto valor produzido uma vez e esquecido</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canal-card" onclick="toggleCanal(this)">
+    <div class="c-header">
+      <div class="c-icon">📚</div>
+      <div class="c-title"><strong>Loja / Editora</strong><small>Roberto Menescal, entre outros</small></div>
+      <div class="c-badge atencao">Atenção</div>
+      <div class="c-arrow">▾</div>
+    </div>
+    <div class="c-body">
+      <p>A Souza Lima tem uma editora com livros de músicos referência, incluindo Roberto Menescal. Isso vai muito além de escola de música: é uma instituição que produz e publica conhecimento. Esse ativo não aparece de forma integrada no blog, no Instagram, nem nas campanhas.</p>
+      <ul class="c-list">
+        <li>Publicações da editora ausentes do blog e do Instagram</li>
+        <li>Roberto Menescal como autor não é comunicado como diferencial</li>
+        <li>Loja desconectada da estratégia de conteúdo</li>
+      </ul>
+    </div>
+  </div>
+
 </div>
+
+<!-- OPORTUNIDADE -->
 <div class="oportunidade-section">
   <div class="sec-label">O que isso significa</div>
-  <h2>A Souza Lima nao tem problema de produto.</h2>
-  <p>Os canais existem, o trafego existe, as credenciais existem. O que falta e a conexao entre esses ativos e a decisao de matricula.</p>
-  <p>Parte das oportunidades de maior impacto nao exige investimento adicional em midia. O blog sozinho ja traz 4 milhoes de visitas por ano. Colocar CTAs nos artigos mais visitados pode gerar leads sem nenhum real a mais em anuncio.</p>
-  <p>O trabalho e ativar o que ja existe. Redirecionar o que ja esta sendo investido. E construir a ponte entre quem chega e quem matricula.</p>
+  <h2>A Souza Lima não tem problema de produto.</h2>
+  <p>Os canais existem, o tráfego existe, as credenciais existem. O que falta é a conexão entre esses ativos e a decisão de matrícula.</p>
+  <p>Parte das oportunidades de maior impacto não exige investimento adicional em mídia. O blog sozinho já traz 4 milhões de visitas por ano. Colocar CTAs nos artigos mais visitados pode gerar leads sem nenhum real a mais em anúncio.</p>
+  <p>O trabalho é ativar o que já existe. Redirecionar o que já está sendo investido. E construir a ponte entre quem chega e quem matricula.</p>
 </div>
+
+<!-- PRÓXIMOS PASSOS -->
 <div class="steps-section">
-  <div class="sec-label">Como avancar</div>
-  <h2>Proximos passos</h2>
-  <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Revisao do diagnostico</strong><p>Alinhamento sobre o que faz sentido como prioridade dado o contexto interno da escola.</p></div></div>
-  <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Definicao de escopo</strong><p>Quais frentes atacar primeiro, com qual time e em qual prazo.</p></div></div>
-  <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Proposta estruturada</strong><p>Com base no alinhamento, escopo, entregaveis e cronograma para as frentes priorizadas.</p></div></div>
+  <div class="sec-label">Como avançar</div>
+  <h2>Próximos passos</h2>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <strong>Revisão do diagnóstico</strong>
+      <p>Alinhamento sobre o que faz sentido como prioridade dado o contexto interno da escola.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <strong>Definição de escopo</strong>
+      <p>Quais frentes atacar primeiro, com qual time e em qual prazo. Não é preciso fazer tudo de uma vez.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <strong>Proposta estruturada</strong>
+      <p>Com base no alinhamento, escopo, entregáveis e cronograma para as frentes priorizadas.</p>
+    </div>
+  </div>
 </div>
+
+<!-- FOOTER -->
 <div class="footer">
   <div class="kukai">KUKAI</div>
-  <div style="color:#666;font-size:13px;">Diagnostico de Comunicacao Digital</div>
-  <div style="color:#555;font-size:12px;margin-top:4px;">Junho de 2026</div>
-  <div class="confidential">Documento preparado exclusivamente para Mario Cunha</div>
+  <div style="color:#666; font-size:13px;">Diagnóstico de Comunicação Digital</div>
+  <div style="color:#555; font-size:12px; margin-top:4px;">Junho de 2026</div>
+  <div class="confidential">Documento preparado exclusivamente para Mário Cunha</div>
 </div>
+
 <script>
   function toggleCard(card) {
     const isOpen = card.classList.contains('open');
     document.querySelectorAll('.priority-card').forEach(c => c.classList.remove('open'));
     if (!isOpen) card.classList.add('open');
   }
-  function toggleCanal(card) { card.classList.toggle('open'); }
+  function toggleCanal(card) {
+    card.classList.toggle('open');
+  }
+  // Open first priority card by default
   document.querySelector('.priority-card').classList.add('open');
 </script>
 </body>
